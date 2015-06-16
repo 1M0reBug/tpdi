@@ -1,6 +1,8 @@
-package controller;
+package com.ninja_squad.tpdi.controller;
 
-import service.SpectacleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import com.ninja_squad.tpdi.service.SpectacleService;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -8,11 +10,13 @@ import java.util.Scanner;
 /**
  * Created by jordan on 21/05/15.
  */
+@Component
 public class SpectacleCtrl {
 
     private SpectacleService service;
 
-    public SpectacleCtrl(SpectacleService _service) {
+    @Autowired
+   public SpectacleCtrl(SpectacleService _service) {
         service = _service;
     }
 

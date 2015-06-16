@@ -2,6 +2,8 @@ package com.ninja_squad.tpdi;
 
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -14,7 +16,9 @@ import javax.sql.DataSource;
  * Spring application configuration. Lacks some annotations.
  * @author JB Nizet
  */
-@EnableTransactionManagement
+
+@Configuration
+@ComponentScan("com.ninja_squad.tpdi")
 public class AppConfig {
     @Bean
     public LocalContainerEntityManagerFactoryBean emf() {
