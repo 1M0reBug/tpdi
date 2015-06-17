@@ -16,8 +16,8 @@ public class SpectacleCtrl {
     private SpectacleService service;
 
     @Autowired
-   public SpectacleCtrl(SpectacleService _service) {
-        service = _service;
+   public SpectacleCtrl(SpectacleService service) {
+        this.service = service;
     }
 
     public void init() throws IOException {

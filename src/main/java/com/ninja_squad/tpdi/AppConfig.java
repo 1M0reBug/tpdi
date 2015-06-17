@@ -16,8 +16,8 @@ import javax.sql.DataSource;
  * Spring application configuration. Lacks some annotations.
  * @author JB Nizet
  */
-
 @Configuration
+@EnableTransactionManagement
 @ComponentScan("com.ninja_squad.tpdi")
 public class AppConfig {
     @Bean

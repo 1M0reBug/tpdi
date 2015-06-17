@@ -31,7 +31,7 @@ public class SpectacleServiceTest{
     @Test
     public void shouldUseDaoTrouver() throws Exception {
         Stream<String> str = Stream.of("test1", "test2");
-        when(mockDao.trouver(anyString())).thenReturn(str);
+        when(mockDao.trouver()).thenReturn(str);
 
         String found = spectacleService.trouver("test1");
 
@@ -41,7 +41,7 @@ public class SpectacleServiceTest{
     @Test
     public void shouldReturnEmptyIfMovieDoesntExists() throws Exception {
         Stream<String> str = Stream.of("test1", "test2");
-        when(mockDao.trouver(anyString())).thenReturn(str);
+        when(mockDao.trouver()).thenReturn(str);
 
         String notFound = spectacleService.trouver("blabla");
 
@@ -51,7 +51,7 @@ public class SpectacleServiceTest{
     @Test
     public void shouldUseDaoCreer() throws Exception {
         Stream<String> str = Stream.of("test1", "test2");
-        when(mockDao.trouver(anyString())).thenReturn(str);
+        when(mockDao.trouver()).thenReturn(str);
 
         spectacleService.creer("test3");
 

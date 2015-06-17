@@ -1,18 +1,10 @@
 package com.ninja_squad.tpdi.domain;
 
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.SequenceGenerator;
+import javax.persistence.*;
 
 @Entity
-
+@Table(name="Spectacle2")
 public class Spectacle {
     @Id
     // name correspond au nom de la séquence utilisée
@@ -27,12 +19,18 @@ public class Spectacle {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getTitre() {
         return titre;
     }
 
-    protected Spectacle() {
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
-
+    public Spectacle() {
+    }
 }

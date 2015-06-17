@@ -24,7 +24,7 @@ public class SpectacleService implements ISpectacleService {
     public String trouver(String search) {
         Stream<String> lines = null;
         try {
-            lines = dao.trouver(search);
+            lines = dao.trouver();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
